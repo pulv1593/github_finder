@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 헤드 테그 -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://bootswatch.com/4/litera/bootstrap.min.css">
+  <title>GitHub Finder</title>
+</head>
+
+<!-- body 태그 -->
+<body>
+
+  <!-- 상단 바 -->
+  <nav class="navbar navbar-dark bg-primary mb-3">
+    <!-- class 지정 상단 바 container -->
+    <div class="container">
+      <!-- 브랜드 text 링크지정, 스타일링을 위한 class 입력 -->
+      <a href="#" class="navbar-brand">GitHub Finder</a>
+    </div>
+  </nav>
+
+  <!-- 검색바 main container -->
+  <div class="container searchContainer">
+    <!-- 검색 flex 박스  -->
+    <div class="search card card-body">
+      <!-- h1태그로 굵은 글씨 기입.  -->
+      <h1>Search GitHub Users</h1>
+      <!-- p태그로 줄 바꿈 *lead?는 어떤 의미로 기입한거지? -->
+      <p class="lead">Enter a username to fetch a user profile and repos</p>
+      <!-- 검색바 입력 및 type text로 지정(사ㅛㅇ자에게 text를 입력 받을 수 있음. placeholder(검색바에 지정해둔 글씨가 입력되어있음.) -->
+      <input type="text" id="searchUser" class="form-control" placeholder="GitHub Username...">
+    </div>
+
+    <!-- br태그: 줄바꿈 태그 -->
+    <br>
+
+    <!-- 자바스크립트에서 생성된 html과 css가 입력될 div box의 id 지정, 자바스크립트에서 해당 id를 선언하여 사용. -->
+    <div id="profile"></div>
+  </div>
+
+  <!-- 하단 footer 부분 -->
+  <footer class="mt-5 p-3 text-center bg-light">
+    <!-- 저작권 표시를 위한 copyright text 기입 -->
+    GitHub Finder &copy;
+  </footer>
+
+  <!-- *1.뭘 불러온거지? 2.crossorigin? integrity? -->
+  <!-- 해결 1: stylesheet의 bootswatch를 이용하기 위한 소스를 불러와줌. -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+  <!-- 외부에서 js파일을 link하여 자바스크립트를 사용하기 위해 script 태그를 이용해 link. -->
+  <script src="github.js"></script>
+  <script src="ui.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
